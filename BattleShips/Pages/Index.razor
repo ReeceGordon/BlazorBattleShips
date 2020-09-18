@@ -10,7 +10,6 @@
                 <p>ShowGrid is currently = @ShowGrid</p>
 
                 <h1 class="display-4">Dev Buttons</h1>
-                <button @onclick="ChangeD1Value" type="button" class="btn btn-success">Change D1 to 1</button>
                 <button @onclick="PrintGridToConsole" type="button" class="btn btn-success">Print Grid to Console</button>
 
                 <EditForm Model="@inputTile" OnValidSubmit="@HandleValidSubmit">
@@ -52,6 +51,9 @@
 
         </div>
     </div>
+
+    
+
     <div class="row mt-4">
         <table class="table table-bordered">
             <thead>
@@ -76,313 +78,313 @@
                     for (char i = 'A'; i < 'K'; i++)
                     {
 
-                <tr>
-                    <th scope="row">@i</th>
+                        <tr>
+                            <th scope="row">@i</th>
 
-                    @if (i == 'A')
-                    {
-                        @for (int j = 0; j < 10; j++)
-                        {
-                            if (Grid[j].ShipSpace == 1)
+                            @if (i == 'A')
                             {
-                                <td class="table-primary">
-                                    @Grid[j].ShipSpace
-                                </td>
+                                @for (int j = 0; j < 10; j++)
+                                {
+                                    if (Grid[j].ShipSpace == 1)
+                                    {
+                                        <td class="table-primary">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else if (Grid[j].ShipSpace == 2 || Grid[j].ShipSpace == 3)
+                                    {
+                                        <td class="table-warning">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else if (Grid[j].ShipSpace == 4)
+                                    {
+                                        <td class="table-danger">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td>
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                }
                             }
-                            else if (Grid[j].ShipSpace == 2 || Grid[j].ShipSpace == 3)
+                            else if (i == 'B')
                             {
-                                <td class="table-warning">
-                                    @Grid[j].ShipSpace
-                                </td>
+                                @for (int j = 10; j < 20; j++)
+                                {
+                                    if (Grid[j].ShipSpace == 1)
+                                    {
+                                        <td class="table-primary">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else if (Grid[j].ShipSpace == 2 || Grid[j].ShipSpace == 3)
+                                    {
+                                        <td class="table-warning">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else if (Grid[j].ShipSpace == 4)
+                                    {
+                                        <td class="table-danger">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td>
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                }
                             }
-                            else if (Grid[j].ShipSpace == 4)
+                            else if (i == 'C')
                             {
-                                <td class="table-danger">
-                                    @Grid[j].ShipSpace
-                                </td>
+                                @for (int j = 20; j < 30; j++)
+                                {
+                                    if (Grid[j].ShipSpace == 1)
+                                    {
+                                        <td class="table-primary">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else if (Grid[j].ShipSpace == 2 || Grid[j].ShipSpace == 3)
+                                    {
+                                        <td class="table-warning">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else if (Grid[j].ShipSpace == 4)
+                                    {
+                                        <td class="table-danger">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td>
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                }
                             }
-                            else
+                            else if (i == 'D')
                             {
-                                <td>
-                                    @Grid[j].ShipSpace
-                                </td>
+                                @for (int j = 30; j < 40; j++)
+                                {
+                                    if (Grid[j].ShipSpace == 1)
+                                    {
+                                        <td class="table-primary">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else if (Grid[j].ShipSpace == 2 || Grid[j].ShipSpace == 3)
+                                    {
+                                        <td class="table-warning">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else if (Grid[j].ShipSpace == 4)
+                                    {
+                                        <td class="table-danger">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td>
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                }
                             }
-                        }
-                    }
-                    else if (i == 'B')
-                    {
-                        @for (int j = 10; j < 20; j++)
-                        {
-                            if (Grid[j].ShipSpace == 1)
+                            else if (i == 'E')
                             {
-                                <td class="table-primary">
-                                    @Grid[j].ShipSpace
-                                </td>
+                                @for (int j = 40; j < 50; j++)
+                                {
+                                    if (Grid[j].ShipSpace == 1)
+                                    {
+                                        <td class="table-primary">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else if (Grid[j].ShipSpace == 2 || Grid[j].ShipSpace == 3)
+                                    {
+                                        <td class="table-warning">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else if (Grid[j].ShipSpace == 4)
+                                    {
+                                        <td class="table-danger">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td>
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                }
                             }
-                            else if (Grid[j].ShipSpace == 2 || Grid[j].ShipSpace == 3)
+                            else if (i == 'F')
                             {
-                                <td class="table-warning">
-                                    @Grid[j].ShipSpace
-                                </td>
+                                @for (int j = 50; j < 60; j++)
+                                {
+                                    if (Grid[j].ShipSpace == 1)
+                                    {
+                                        <td class="table-primary">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else if (Grid[j].ShipSpace == 2 || Grid[j].ShipSpace == 3)
+                                    {
+                                        <td class="table-warning">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else if (Grid[j].ShipSpace == 4)
+                                    {
+                                        <td class="table-danger">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td>
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                }
                             }
-                            else if (Grid[j].ShipSpace == 4)
+                            else if (i == 'G')
                             {
-                                <td class="table-danger">
-                                    @Grid[j].ShipSpace
-                                </td>
+                                @for (int j = 60; j < 70; j++)
+                                {
+                                    if (Grid[j].ShipSpace == 1)
+                                    {
+                                        <td class="table-primary">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else if (Grid[j].ShipSpace == 2 || Grid[j].ShipSpace == 3)
+                                    {
+                                        <td class="table-warning">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else if (Grid[j].ShipSpace == 4)
+                                    {
+                                        <td class="table-danger">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td>
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                }
                             }
-                            else
+                            else if (i == 'H')
                             {
-                                <td>
-                                    @Grid[j].ShipSpace
-                                </td>
+                                @for (int j = 70; j < 80; j++)
+                                {
+                                    if (Grid[j].ShipSpace == 1)
+                                    {
+                                        <td class="table-primary">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else if (Grid[j].ShipSpace == 2 || Grid[j].ShipSpace == 3)
+                                    {
+                                        <td class="table-warning">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else if (Grid[j].ShipSpace == 4)
+                                    {
+                                        <td class="table-danger">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td>
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                }
                             }
-                        }
-                    }
-                    else if (i == 'C')
-                    {
-                        @for (int j = 20; j < 30; j++)
-                        {
-                            if (Grid[j].ShipSpace == 1)
+                            else if (i == 'I')
                             {
-                                <td class="table-primary">
-                                    @Grid[j].ShipSpace
-                                </td>
+                                @for (int j = 80; j < 90; j++)
+                                {
+                                    if (Grid[j].ShipSpace == 1)
+                                    {
+                                        <td class="table-primary">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else if (Grid[j].ShipSpace == 2 || Grid[j].ShipSpace == 3)
+                                    {
+                                        <td class="table-warning">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else if (Grid[j].ShipSpace == 4)
+                                    {
+                                        <td class="table-danger">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td>
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                }
                             }
-                            else if (Grid[j].ShipSpace == 2 || Grid[j].ShipSpace == 3)
+                            else if (i == 'J')
                             {
-                                <td class="table-warning">
-                                    @Grid[j].ShipSpace
-                                </td>
+                                @for (int j = 90; j < 100; j++)
+                                {
+                                    if (Grid[j].ShipSpace == 1)
+                                    {
+                                        <td class="table-primary">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else if (Grid[j].ShipSpace == 2 || Grid[j].ShipSpace == 3)
+                                    {
+                                        <td class="table-warning">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else if (Grid[j].ShipSpace == 4)
+                                    {
+                                        <td class="table-danger">
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td>
+                                            @Grid[j].ShipSpace
+                                        </td>
+                                    }
+                                }
                             }
-                            else if (Grid[j].ShipSpace == 4)
-                            {
-                                <td class="table-danger">
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                            else
-                            {
-                                <td>
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                        }
-                    }
-                    else if (i == 'D')
-                    {
-                        @for (int j = 30; j < 40; j++)
-                        {
-                            if (Grid[j].ShipSpace == 1)
-                            {
-                                <td class="table-primary">
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                            else if (Grid[j].ShipSpace == 2 || Grid[j].ShipSpace == 3)
-                            {
-                                <td class="table-warning">
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                            else if (Grid[j].ShipSpace == 4)
-                            {
-                                <td class="table-danger">
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                            else
-                            {
-                                <td>
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                        }
-                    }
-                    else if (i == 'E')
-                    {
-                        @for (int j = 40; j < 50; j++)
-                        {
-                            if (Grid[j].ShipSpace == 1)
-                            {
-                                <td class="table-primary">
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                            else if (Grid[j].ShipSpace == 2 || Grid[j].ShipSpace == 3)
-                            {
-                                <td class="table-warning">
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                            else if (Grid[j].ShipSpace == 4)
-                            {
-                                <td class="table-danger">
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                            else
-                            {
-                                <td>
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                        }
-                    }
-                    else if (i == 'F')
-                    {
-                        @for (int j = 50; j < 60; j++)
-                        {
-                            if (Grid[j].ShipSpace == 1)
-                            {
-                                <td class="table-primary">
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                            else if (Grid[j].ShipSpace == 2 || Grid[j].ShipSpace == 3)
-                            {
-                                <td class="table-warning">
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                            else if (Grid[j].ShipSpace == 4)
-                            {
-                                <td class="table-danger">
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                            else
-                            {
-                                <td>
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                        }
-                    }
-                    else if (i == 'G')
-                    {
-                        @for (int j = 60; j < 70; j++)
-                        {
-                            if (Grid[j].ShipSpace == 1)
-                            {
-                                <td class="table-primary">
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                            else if (Grid[j].ShipSpace == 2 || Grid[j].ShipSpace == 3)
-                            {
-                                <td class="table-warning">
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                            else if (Grid[j].ShipSpace == 4)
-                            {
-                                <td class="table-danger">
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                            else
-                            {
-                                <td>
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                        }
-                    }
-                    else if (i == 'H')
-                    {
-                        @for (int j = 70; j < 80; j++)
-                        {
-                            if (Grid[j].ShipSpace == 1)
-                            {
-                                <td class="table-primary">
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                            else if (Grid[j].ShipSpace == 2 || Grid[j].ShipSpace == 3)
-                            {
-                                <td class="table-warning">
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                            else if (Grid[j].ShipSpace == 4)
-                            {
-                                <td class="table-danger">
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                            else
-                            {
-                                <td>
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                        }
-                    }
-                    else if (i == 'I')
-                    {
-                        @for (int j = 80; j < 90; j++)
-                        {
-                            if (Grid[j].ShipSpace == 1)
-                            {
-                                <td class="table-primary">
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                            else if (Grid[j].ShipSpace == 2 || Grid[j].ShipSpace == 3)
-                            {
-                                <td class="table-warning">
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                            else if (Grid[j].ShipSpace == 4)
-                            {
-                                <td class="table-danger">
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                            else
-                            {
-                                <td>
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                        }
-                    }
-                    else if (i == 'J')
-                    {
-                        @for (int j = 90; j < 100; j++)
-                        {
-                            if (Grid[j].ShipSpace == 1)
-                            {
-                                <td class="table-primary">
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                            else if (Grid[j].ShipSpace == 2 || Grid[j].ShipSpace == 3)
-                            {
-                                <td class="table-warning">
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                            else if (Grid[j].ShipSpace == 4)
-                            {
-                                <td class="table-danger">
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                            else
-                            {
-                                <td>
-                                    @Grid[j].ShipSpace
-                                </td>
-                            }
-                        }
-                    }
 
 
 
-                </tr>
+                        </tr>
                         @if (true) { Count++; }
                     }
                 }
@@ -396,6 +398,7 @@
     private InputTile inputTile = new InputTile();
     List<Ship> Battleships = new List<Ship>();
     List<Tile> Grid = new List<Tile>();
+    List<Tile> GridHidden = new List<Tile>(); //Grid used to hide where the ships are.
     bool ShowGrid = false;
     int Count = 1;
     bool winCondition = false; //While false the game continues to progress
@@ -434,6 +437,7 @@
             for (int j = 0; j < 10; j++)
             {
                 Grid.Add(new Tile { X = i, Y = j, ShipSpace = 0 });
+                GridHidden.Add(new Tile { X = i, Y = j, ShipSpace = 0 });
             }
         }
 
@@ -496,7 +500,7 @@
         while (DuncanCheck == false)
         {
             Console.WriteLine("DuncanSpawn = " + DuncanSpawn);
-            if ((DuncanSpawn % 10) < 6) //Assumed start point from left to right, so long as modulo result is less than 6 horizontal spawn is always possible
+            if ((DuncanSpawn % 10) <= 6) //Assumed start point from left to right, so long as modulo result is less than 6 horizontal spawn is always possible
             {
                 if (Grid.ElementAt(DuncanSpawn).ShipSpace != 1 &&
                    Grid.ElementAt(DuncanSpawn + 1).ShipSpace != 1 &&
@@ -509,8 +513,51 @@
                     Grid.ElementAt(DuncanSpawn + 3).ShipSpace = 2;
                     DuncanCheck = true;
                 }
+                else //If modulo is still less than 6 but space attempting to spawn is occupied by another ship
+                {
+                    if (Grid.ElementAtOrDefault(DuncanSpawn + 10) != null && //Determine if space exists heading vertically down from origin
+                    Grid.ElementAtOrDefault(DuncanSpawn + 20) != null &&
+                    Grid.ElementAtOrDefault(DuncanSpawn + 30) != null)
+                    {
+                        if (Grid.ElementAt(DuncanSpawn).ShipSpace != 1 &&
+                       Grid.ElementAt(DuncanSpawn + 10).ShipSpace != 1 &&
+                       Grid.ElementAt(DuncanSpawn + 20).ShipSpace != 1 &&
+                       Grid.ElementAt(DuncanSpawn + 30).ShipSpace != 1) //Check to see if Battleship already exists in area
+                        {
+                            Grid.ElementAt(DuncanSpawn).ShipSpace = 2;
+                            Grid.ElementAt(DuncanSpawn + 10).ShipSpace = 2;
+                            Grid.ElementAt(DuncanSpawn + 20).ShipSpace = 2;
+                            Grid.ElementAt(DuncanSpawn + 30).ShipSpace = 2;
+                            DuncanCheck = true;
+                        }
+                        else
+                        {
+                            DuncanSpawn = rnd.Next(0, 99); //If a spawn solution cannot be found rebase random spawn
+                        }
+                    }
+                    else if ((Grid.ElementAtOrDefault(DuncanSpawn - 10) != null && //Determine if space exists heading vertically up from origin
+                        Grid.ElementAtOrDefault(DuncanSpawn - 20) != null &&
+                        Grid.ElementAtOrDefault(DuncanSpawn - 30) != null))
+                    {
+                        if (Grid.ElementAt(DuncanSpawn).ShipSpace != 1 &&
+                       Grid.ElementAt(DuncanSpawn - 10).ShipSpace != 1 &&
+                       Grid.ElementAt(DuncanSpawn - 20).ShipSpace != 1 &&
+                       Grid.ElementAt(DuncanSpawn - 30).ShipSpace != 1) //Check to see if Battleship already exists in area
+                        {
+                            Grid.ElementAt(DuncanSpawn).ShipSpace = 2;
+                            Grid.ElementAt(DuncanSpawn - 10).ShipSpace = 2;
+                            Grid.ElementAt(DuncanSpawn - 20).ShipSpace = 2;
+                            Grid.ElementAt(DuncanSpawn - 30).ShipSpace = 2;
+                            DuncanCheck = true;
+                        }
+                        else
+                        {
+                            DuncanSpawn = rnd.Next(0, 99); //If a spawn solution cannot be found rebase random spawn
+                        }
+                    }
+                }
             }
-            else if ((DuncanSpawn % 10) >= 6)
+            else if ((DuncanSpawn % 10) > 6)
             {
                 if (Grid.ElementAtOrDefault(DuncanSpawn + 10) != null && //Determine if space exists heading vertically down from origin
                     Grid.ElementAtOrDefault(DuncanSpawn + 20) != null &&
@@ -527,6 +574,10 @@
                         Grid.ElementAt(DuncanSpawn + 30).ShipSpace = 2;
                         DuncanCheck = true;
                     }
+                    else
+                    {
+                        DuncanSpawn = rnd.Next(0, 99); //If a spawn solution cannot be found rebase random spawn
+                    }
                 }
                 else if ((Grid.ElementAtOrDefault(DuncanSpawn - 10) != null && //Determine if space exists heading vertically up from origin
                     Grid.ElementAtOrDefault(DuncanSpawn - 20) != null &&
@@ -542,6 +593,10 @@
                         Grid.ElementAt(DuncanSpawn - 20).ShipSpace = 2;
                         Grid.ElementAt(DuncanSpawn - 30).ShipSpace = 2;
                         DuncanCheck = true;
+                    }
+                    else
+                    {
+                        DuncanSpawn = rnd.Next(0, 99); //If a spawn solution cannot be found rebase random spawn
                     }
                 }
             }
@@ -560,7 +615,7 @@
         while (DefenderCheck == false)
         {
             Console.WriteLine("DefenderSpawn = " + DefenderSpawn);
-            if ((DefenderSpawn % 10) < 6) //Assumed start point from left to right, so long as modulo result is less than 6 horizontal spawn is always possible
+            if ((DefenderSpawn % 10) <= 6) //Assumed start point from left to right, so long as modulo result is less than 6 horizontal spawn is always possible
             {
                 if (Grid.ElementAt(DefenderSpawn).ShipSpace == 0 &&
                    Grid.ElementAt(DefenderSpawn + 1).ShipSpace == 0 &&
@@ -573,8 +628,51 @@
                     Grid.ElementAt(DefenderSpawn + 3).ShipSpace = 3;
                     DefenderCheck = true;
                 }
+                else //If modulo is still less than 6 but space attempting to spawn is occupied by another ship
+                {
+                    if (Grid.ElementAtOrDefault(DefenderSpawn + 10) != null && //Determine if space exists heading vertically down from origin
+                    Grid.ElementAtOrDefault(DefenderSpawn + 20) != null &&
+                    Grid.ElementAtOrDefault(DefenderSpawn + 30) != null)
+                    {
+                        if (Grid.ElementAt(DefenderSpawn).ShipSpace == 0 &&
+                       Grid.ElementAt(DefenderSpawn + 10).ShipSpace == 0 &&
+                       Grid.ElementAt(DefenderSpawn + 20).ShipSpace == 0 &&
+                       Grid.ElementAt(DefenderSpawn + 30).ShipSpace == 0) //Check to see if Battleship or Duncan already exists in area
+                        {
+                            Grid.ElementAt(DefenderSpawn).ShipSpace = 3;
+                            Grid.ElementAt(DefenderSpawn + 10).ShipSpace = 3;
+                            Grid.ElementAt(DefenderSpawn + 20).ShipSpace = 3;
+                            Grid.ElementAt(DefenderSpawn + 30).ShipSpace = 3;
+                            DefenderCheck = true;
+                        }
+                        else
+                        {
+                            DefenderSpawn = rnd.Next(0, 99); //If a spawn solution cannot be found rebase random spawn
+                        }
+                    }
+                    else if ((Grid.ElementAtOrDefault(DefenderSpawn - 10) != null && //Determine if space exists heading vertically up from origin
+                        Grid.ElementAtOrDefault(DefenderSpawn - 20) != null &&
+                        Grid.ElementAtOrDefault(DefenderSpawn - 30) != null))
+                    {
+                        if (Grid.ElementAt(DefenderSpawn).ShipSpace == 0 &&
+                       Grid.ElementAt(DefenderSpawn - 10).ShipSpace == 0 &&
+                       Grid.ElementAt(DefenderSpawn - 20).ShipSpace == 0 &&
+                       Grid.ElementAt(DefenderSpawn - 30).ShipSpace == 0) //Check to see if Battleship or Duncan already exists in area
+                        {
+                            Grid.ElementAt(DefenderSpawn).ShipSpace = 3;
+                            Grid.ElementAt(DefenderSpawn - 10).ShipSpace = 3;
+                            Grid.ElementAt(DefenderSpawn - 20).ShipSpace = 3;
+                            Grid.ElementAt(DefenderSpawn - 30).ShipSpace = 3;
+                            DefenderCheck = true;
+                        }
+                        else
+                        {
+                            DefenderSpawn = rnd.Next(0, 99); //If a spawn solution cannot be found rebase random spawn
+                        }
+                    }
+                }
             }
-            else if ((DefenderSpawn % 10) >= 6)
+            else if ((DefenderSpawn % 10) > 6)
             {
                 if (Grid.ElementAtOrDefault(DefenderSpawn + 10) != null && //Determine if space exists heading vertically down from origin
                     Grid.ElementAtOrDefault(DefenderSpawn + 20) != null &&
@@ -590,6 +688,10 @@
                         Grid.ElementAt(DefenderSpawn + 20).ShipSpace = 3;
                         Grid.ElementAt(DefenderSpawn + 30).ShipSpace = 3;
                         DefenderCheck = true;
+                    }
+                    else
+                    {
+                        DefenderSpawn = rnd.Next(0, 99); //If a spawn solution cannot be found rebase random spawn
                     }
                 }
                 else if ((Grid.ElementAtOrDefault(DefenderSpawn - 10) != null && //Determine if space exists heading vertically up from origin
@@ -607,6 +709,10 @@
                         Grid.ElementAt(DefenderSpawn - 30).ShipSpace = 3;
                         DefenderCheck = true;
                     }
+                    else
+                    {
+                        DefenderSpawn = rnd.Next(0, 99); //If a spawn solution cannot be found rebase random spawn
+                    }
                 }
             }
             else
@@ -618,18 +724,6 @@
 
         ShowGrid = true;
 
-    }
-
-    private async Task ChangeD1Value()
-    {
-        Count = 1;
-        foreach (var element in Grid)
-        {
-            if (element.X == 'D' && element.Y == 5)
-            {
-                element.ShipSpace = 1;
-            }
-        }
     }
 
     private async Task PrintGridToConsole()
