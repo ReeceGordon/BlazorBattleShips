@@ -41,6 +41,14 @@
                 <button @onclick="StartGame" type="button" class="btn btn-success">Start Game</button>
                 <p>ShowGrid is currently = @ShowGrid</p>
             }
+            @if (winCondition)
+            {
+                <p class="lead">CONGRATS YOU WIN</p>
+            }
+            else
+            {
+                <p class="lead">THERE ARE STILL SHIPS REMAINING!</p>
+            }
 
         </div>
     </div>
@@ -390,6 +398,7 @@
     List<Tile> Grid = new List<Tile>();
     bool ShowGrid = false;
     int Count = 1;
+    bool winCondition = false; //While false the game continues to progress
 
     Random rnd = new Random();
 
@@ -644,6 +653,37 @@
             {
                 element.ShipSpace = 4;
             }
+        }
+
+        //Check whether any ships remain
+        bool BattleshipFound = false;
+        bool DuncanFound = false;
+        bool DefenderFound = false;
+
+        foreach(var element in Grid)
+        {
+            if(element.ShipSpace == 1)
+            {
+                BattleshipFound = true;
+            }
+            if(element.ShipSpace == 2)
+            {
+                DuncanFound = true;
+            }
+            if(element.ShipSpace == 3)
+            {
+                DefenderFound = true;
+            }
+        }
+
+        //If any ships are found the wincondition isn't found, else it is and the game can end
+        if(BattleshipFound || DuncanFound || DefenderFound)
+        {
+            winCondition = false;
+        }
+        else
+        {
+            winCondition = true;
         }
     }
 
