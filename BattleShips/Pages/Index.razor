@@ -27,13 +27,13 @@
 
                             <div class="form-group">
 
-                                <label for="x">Input X Coordinate</label>
-                                <InputText class="form-control" id="x" @bind-Value="inputTile.X" />
+                                <label for="y">Input Y Coordinate</label>
+                                <InputText class="form-control" id="y" @bind-Value="inputTile.Y" />
                             </div>
                             <div class="form-group">
 
-                                <label for="y">Input Y Coordinate</label>
-                                <InputNumber class="form-control" id="y" @bind-Value="inputTile.Y" />
+                                <label for="x">Input X Coordinate</label>
+                                <InputNumber class="form-control" id="x" @bind-Value="inputTile.X" />
                             </div>
 
 
@@ -697,8 +697,8 @@
         {
             for (int j = 0; j < 10; j++)
             {
-                Grid.Add(new Tile { X = i, Y = j, ShipSpace = 0 });
-                GridHidden.Add(new Tile { X = i, Y = j, ShipSpace = 0 });
+                Grid.Add(new Tile { Y = i, X = j, ShipSpace = 0 });
+                GridHidden.Add(new Tile { Y = i, X = j, ShipSpace = 0 });
             }
         }
 
@@ -1003,8 +1003,8 @@
 
     private void HandleValidSubmit()
     {
-        char x = Convert.ToChar(inputTile.X);
-        int y = inputTile.Y - 1;
+        char y = Convert.ToChar(inputTile.Y);
+        int x = inputTile.X - 1;
         Count = 1;
 
         //Makes tile Hit on the real grid
